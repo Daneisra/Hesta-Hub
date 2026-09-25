@@ -1,75 +1,18 @@
-# React + TypeScript + Vite
+# Hesta-Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portail public statique de l'univers Hesta. Il présente les applications indépendantes de l'écosystème et oriente vers la communauté. Aucun backend ni compte n'est nécessaire.
 
-Currently, two official plugins are available:
+## Développement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- npm install
+- npm run dev
+- npm run lint
+- npm run build
 
-## React Compiler
+La compilation Vite produit des fichiers statiques dans dist/.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Ajouter une application
 
-## Expanding the ESLint configuration
+Ajoutez un objet au tableau applications dans src/App.tsx. Chaque objet fournit le nom, une courte description, les fonctions principales, l'URL, le libellé du bouton, un monogramme et une couleur d'accent. Le composant ApplicationCard et la grille responsive affichent automatiquement la nouvelle entrée, sans mise en page propre à deux applications.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+Les liens vers Carte Hesta et Système PA sont des URL publiques directes. Le lien communautaire mène à la section Discord de Carte Hesta ; il peut être remplacé par une invitation Discord publique stable lorsqu'elle est confirmée.
