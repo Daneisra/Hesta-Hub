@@ -114,7 +114,7 @@ person
 organization
 family
 religion
- deity
+deity
 species
 creature
 artifact
