@@ -37,6 +37,11 @@ Ajoutez un objet au tableau applications dans src/App.tsx. Chaque objet fournit 
 
 Les liens vers Carte Hesta et Système PA sont des URL publiques directes. Le lien communautaire mène à la section Discord de Carte Hesta ; il peut être remplacé par une invitation Discord publique stable lorsqu'elle est confirmée.
 
+## Documentation
+
+- [Roadmap globale de l'écosystème](ROADMAP.md)
+- [Architecture cible de Hesta Codex](docs/HESTA-CODEX-ARCHITECTURE.md)
+
 ## Écosystème Hesta
 
 | Application | Rôle | URL publique |
