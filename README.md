@@ -11,7 +11,7 @@
 
 Portail central public de l'univers Hesta, disponible sur [hesta.dannytech.fr](https://hesta.dannytech.fr/). Il présente les applications indépendantes de l'écosystème et oriente vers la communauté. Le portail est statique : aucun backend ni compte n'est nécessaire.
 
-Le portail déployé présente Carte Hesta et Système PA. Le travail local préparé ajoute Hesta Codex, avec des accès dans le même onglet ; cette intégration n'est pas encore déployée au 12 octobre 2026. Chaque application conserve son fonctionnement et ses permissions. Hesta Codex est lui-même déployé : il propose une encyclopédie structurée, des fiches reliées, des sources et un graphe interactif. Les contenus importés sont principalement au statut « proposé » et réservés à l'administration MJ ; leur publication reste soumise à validation et à leurs permissions.
+Les trois applications sont accessibles depuis le portail, dans le même onglet. Chacune conserve son fonctionnement et ses permissions. Les contenus importés dans Hesta Codex sont principalement au statut « proposé » et réservés à l'administration MJ ; leur publication reste soumise à validation et à leurs permissions.
 
 ## Stack
 
@@ -55,6 +55,6 @@ La prochaine grande étape est un audit de Carte Hesta pour organiser la carte, 
 | Application | Rôle | URL publique |
 | --- | --- | --- |
 | Hesta Hub — ce projet | Portail central | [hesta.dannytech.fr](https://hesta.dannytech.fr/) |
-| Carte Hesta | Carte interactive, quêtes, chronologie, planning et communauté | [cartehesta.dannytech.fr](https://cartehesta.dannytech.fr/) |
-| Système PA | Armures, matériaux, builds et outils de combat | [pahesta.dannytech.fr](https://pahesta.dannytech.fr/) |
-| Hesta Codex | Encyclopédie structurée, lore, relations, sources et graphe ; accès aux fiches selon leurs permissions | [codexhesta.dannytech.fr](https://codexhesta.dannytech.fr/) |
+| Carte Hesta | Carte interactive, chronologie, planning et communauté | [cartehesta.dannytech.fr](https://cartehesta.dannytech.fr/) |
+| Système PA | Armures, règles et calculs | [pahesta.dannytech.fr](https://pahesta.dannytech.fr/) |
+| Hesta Codex | Encyclopédie, lore, relations éditoriales et provenance | [codexhesta.dannytech.fr](https://codexhesta.dannytech.fr/) |
