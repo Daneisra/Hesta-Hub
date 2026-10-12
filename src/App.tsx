@@ -2,9 +2,10 @@ import './App.css'
 
 type Application = {
   id: string
- category: string
+  category: string
   name: string
   description: string
+  accessNote?: string
   features: readonly string[]
   href: string
   action: string
@@ -16,7 +17,7 @@ type Application = {
 const applications: readonly Application[] = [
   {
     id: 'carte-hesta',
-   category: 'Explorer le monde',
+    category: 'Explorer le monde',
     name: 'Carte Hesta',
     description:
       'Parcourez un monde vivant, suivez ses quêtes et retrouvez les histoires qui relient les joueurs.',
@@ -28,7 +29,7 @@ const applications: readonly Application[] = [
   },
   {
     id: 'systeme-pa',
-   category: 'Préparer l’aventure',
+    category: 'Préparer l’aventure',
     name: 'Système PA',
     description:
       'Composez vos armures, comparez les matériaux et préparez votre équipement pour le combat.',
@@ -37,6 +38,20 @@ const applications: readonly Application[] = [
     action: 'Ouvrir Système PA',
     monogram: 'PA',
     accent: 'violet',
+  },
+  {
+    id: 'hesta-codex',
+    category: 'Explorer les connaissances',
+    name: 'Hesta Codex',
+    description:
+      'Découvrez l\'encyclopédie du Monde d\'Hesta : personnages, lieux, organisations, histoire et relations qui façonnent cet univers.',
+    accessNote:
+      'Les contenus importés sont principalement en cours de validation et réservés à l’administration MJ.',
+    features: ['Encyclopédie', 'Lore et histoire', 'Relations et sources'],
+    href: 'https://codexhesta.dannytech.fr/',
+    action: 'Ouvrir Hesta Codex',
+    monogram: 'HC',
+    accent: 'azure',
   },
 ]
 
@@ -57,6 +72,10 @@ function ApplicationCard({ application, index }: { application: Application; ind
 
         <h3>{application.name}</h3>
         <p className="application-card__description">{application.description}</p>
+
+        {application.accessNote && (
+          <p className="application-card__access-note">{application.accessNote}</p>
+        )}
 
         <ul className="application-card__features" aria-label={`Fonctions de ${application.name}`}>
           {application.features.map((feature) => (

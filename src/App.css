@@ -441,6 +441,13 @@
   list-style: none;
 }
 
+.application-card__access-note {
+  margin: 12px 0 0;
+  color: #aab8d1;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .application-card__features li {
   padding: 7px 10px;
   border: 1px solid rgba(177, 195, 224, 0.14);
