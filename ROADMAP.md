@@ -1,6 +1,8 @@
 # Roadmap globale de l'écosystème Hesta
 
-Cette roadmap synthétise les priorités des quatre applications indépendantes. Elle est synchronisée avec le code, les documents techniques, les révisions Git et les preuves de CI/livraison consultés le **12 octobre 2026**. Les détails de vérification figurent dans le [relevé transversal](docs/ECOSYSTEM-AUDIT-2026-10.md).
+Cette roadmap synthétise les priorités des quatre applications indépendantes. Actualisation ciblée du **22 octobre 2026** : livraisons Carte Hesta validées par l'opérateur, dépôts officiels, liens et documentation. Les acquis détaillés des autres applications conservent les limites de leurs documents locaux ; aucun nouvel audit général ni contrôle de données privées n'est effectué ici.
+
+Le [relevé du 12 octobre](docs/ECOSYSTEM-AUDIT-2026-10.md) reste une photographie historique, antérieure à la sécurisation de Carte Hesta ; il ne décrit pas l'exploitation actuelle.
 
 ## Lecture des statuts
 
@@ -17,19 +19,28 @@ Une case cochée clôt uniquement le périmètre qu'elle nomme. Elle ne certifie
 
 ## État actuel de l'écosystème
 
-| Application | Fonctionnalités et développement | Tests et validation | Déploiement |
-| --- | --- | --- | --- |
-| [Hesta Hub](https://hesta.dannytech.fr/) | Portail statique ; Carte Hesta et Système PA en production. Carte Hesta Codex ajoutée dans le travail local. | Lint/build et responsive de l'intégration validés localement ; H1–H2. | Base `ef95fe3` livrée. Intégration Codex **non commitée/non déployée**, confirmée absente du bundle public. |
-| [Carte Hesta](https://cartehesta.dannytech.fr/) | `0.17.49` : accueil, carte, profils/groupes, quêtes/live, chronologie, planning daté et administration. | CI du HEAD réussie : unitaires, données, 4 API, 52 Chromium, 52 Firefox ; M1–M10. Audit approfondi et finition globale restent ouverts. | `b78e174` livré ; pages carte/chronologie/planning et API de lecture contrôlées publiquement. |
-| [Système PA](https://pahesta.dannytech.fr/) | **1.0.0 stable publiée** : calculs, combat/PV, réparation, matériaux, builds, éditeur, impression et PWA. | 46 tests CI réussis ; règles/données auditées ; PDF Chrome/Firefox/Edge validés selon le rapport local ; PA1–PA6. | `25df663` livré ; tag et release GitHub `v1.0.0` publiés le 27 septembre. |
-| [Hesta Codex](https://codexhesta.dannytech.fr/) | Encyclopédie PostgreSQL/Prisma, auth MJ, édition/publication/suppression, provenance, graphe, staging, Obsidian et qualification des relations ; C1–C20. | CI du HEAD : 438 API + 318 web réussis. Santé DB, catalogue 27 et refus admin anonyme contrôlés. Recette privée réelle **À vérifier**. | `f6f73d7` livré le 12 octobre, migrations et santé confirmées par le workflow. Package `0.1.0` ; les jalons v0.x des docs ne sont pas des releases supplémentaires démontrées. |
+| Application | Rôle et état | Livraison / limite |
+| --- | --- | --- |
+| [Hesta Hub](https://hesta.dannytech.fr/) | Portail central, accès aux trois applications, communauté, Discord et support général. | Carte Codex déjà livrée. Cette harmonisation reste en PR ; invitation Discord générale à confirmer avant affichage. |
+| [Carte Hesta](https://cartehesta.dannytech.fr/) | Carte, lieux, chronologie, planning et administration sécurisés ; [dépôt officiel public](https://github.com/Daneisra/Carte-Hesta). | Site en production, CI Linux et Deploy manuel protégés opérationnels. Mécanisme systemd installé ; véritable redémarrage encore à observer. |
+| [Hesta Codex](https://codexhesta.dannytech.fr/) | Connaissances, édition, provenance et relations ; futur référentiel canonique du lore après qualification. | Socle livré, publication explicite selon les permissions ; intégration Carte/chronologie non réalisée. |
+| [Système PA](https://pahesta.dannytech.fr/) | Règles d'armure, calculs et personnalisations locales indépendants. | Version stable 1.0.0 publiée ; évolutions locales conservées. |
 
-**Données Codex :** l'utilisateur indique 130 fiches issues de 161 notes Markdown, dont 31 emplacements réservés. Le nombre privé n'a pas été relu dans cet audit. Les contenus importés sont principalement proposés et réservés à l'administration MJ. Au contrôle public, la bibliothèque et le graphe étaient vides ; cela ne signifie pas que la base privée l'est.
+### Terminé — sécurisation et exploitation de Carte Hesta
+
+- [x] Sécurisation du stockage, des API, des autorisations et des médias.
+- [x] Reconstruction indépendante du dépôt GitHub public ; ancien historique conservé en privé.
+- [x] Migration et remise en production, données et permissions préservées.
+- [x] CI automatique et premier Deploy manuel protégé validés, rollback du code disponible.
+- [x] Mécanisme systemd installé et actif ; premier démarrage sans interruption.
+- [ ] Observer le retour public lors d'un véritable redémarrage normal du VPS.
+
+Les travaux de cette mission transverse sont des PR non fusionnées, sans déploiement. Les liens et textes préparés ne sont pas présentés comme déjà livrés.
 
 ## Vision et responsabilités
 
-- **Hesta Hub** : porte d'entrée publique, sans compte obligatoire.
-- **Carte Hesta** : exploration spatiale, communauté et logistique des sessions.
+- **Hesta Hub** : porte d'entrée publique, communauté, Discord et support général, sans compte obligatoire.
+- **Carte Hesta** : exploration spatiale, lieux, chronologie et logistique des sessions ; bugs suivis dans ses propres Issues.
 - **Système PA** : armures, matériaux, builds et calculs.
 - **Hesta Codex** : connaissance durable, provenance et relations éditoriales.
 - Les imports et analyses de sessions alimentent des **propositions à valider**, jamais directement le canon.
@@ -51,7 +62,7 @@ L'[architecture cible du Codex](docs/HESTA-CODEX-ARCHITECTURE.md) est une réfé
 
 ## E0 — Socle de l'écosystème
 
-**Livré pour le socle ; intégration de la troisième application au Hub développée, non déployée.** Preuves [H1–H3](docs/ECOSYSTEM-AUDIT-2026-10.md#hesta-hub) et [CI/livraison](docs/ECOSYSTEM-AUDIT-2026-10.md#preuves-de-ci-et-de-livraison).
+**Socle livré, y compris la carte Codex du portail ; harmonisation du 22 octobre préparée en PR.** Preuves [H1–H3](docs/ECOSYSTEM-AUDIT-2026-10.md#hesta-hub) et [CI/livraison](docs/ECOSYSTEM-AUDIT-2026-10.md#preuves-de-ci-et-de-livraison).
 
 - [x] Portail central public `hesta.dannytech.fr`, léger, statique et sans backend.
 - [x] Quatre applications dans des dépôts séparés et déployées indépendamment.
@@ -60,7 +71,7 @@ L'[architecture cible du Codex](docs/HESTA-CODEX-ARCHITECTURE.md) est une réfé
 - [x] CI/CD GitHub Actions vers le VPS : workflows et exécutions réussies consultés pour les quatre dépôts.
 - [x] HTTPS public opérationnel sur les quatre URL au contrôle.
 - [x] Harmonisation initiale des README et identité typographique commune.
-- [ ] **Développé et validé localement :** livrer la carte Hesta Codex du Hub, réutilisant ApplicationCard/grille/accent existants et précisant les restrictions MJ.
+- [x] Carte Hesta Codex du Hub livrée, réutilisant ApplicationCard/grille/accent existants et précisant les restrictions de publication.
 - [ ] **Partiel :** poursuivre la cohérence des README/métadonnées à quatre applications et corriger les déclarations anciennes relevées, sans uniformiser leurs designs.
 - [ ] **À vérifier :** renouvellement Certbot, configuration Nginx effective et procédures d'exploitation/sauvegarde ; un HTTP 200 ne les valide pas entièrement.
 
@@ -87,34 +98,24 @@ Les cinq objectifs de stabilisation ne sont plus futurs. Preuves [PA1–PA6](doc
 
 Maintenance, corrections et évolutions justifiées par l'usage restent prioritaires après 1.0.0. La release est publiée malgré les cases/documentations locales de préparation encore périmées.
 
-### Carte Hesta — socle fonctionnel livré
+### Carte Hesta — sécurisation et reconstruction terminées
 
-Preuves [M1–M10](docs/ECOSYSTEM-AUDIT-2026-10.md#carte-hesta) et [roadmap locale P3–P9](https://github.com/Daneisra/Carte-Interactive/blob/b78e174bcdb15196d763dee66b1189fae3aa2b66/ROADMAP.md).
+- [x] Accueil, carte interactive, lieux, médias/audio, chronologie et planning.
+- [x] Authentification Discord, profils, personnages, groupes privés et administration selon les permissions du compte.
+- [x] Stockage persistant hors code et artefacts ; fixtures entièrement synthétiques.
+- [x] Filtrage serveur et publication explicite ; médias partagés refusés si un parent reste privé.
+- [x] Nouveau dépôt public [Carte-Hesta](https://github.com/Daneisra/Carte-Hesta), avec [signalement de bugs](https://github.com/Daneisra/Carte-Hesta/issues/new/choose).
+- [x] Migration, HTTPS public, CI complète et Deploy manuel protégé avec rollback non destructif.
+- [x] Mécanisme systemd de restauration après arrêt normal installé, sans réouverture en cas d'état incertain.
+- [ ] Observer un vrai redémarrage ; poursuivre la maintenance des régressions et la finition UX justifiée par l'usage.
 
-- [x] Accueil immersif, communauté/Discord, support/crédits, changelog et admin accueil.
-- [x] Carte interactive, lieux/marqueurs, recherche/filtres, favoris, clustering et historique.
-- [x] Fiches avec résumé, lore/histoire, géographie, médias/audio, PNJ/familles et édition/upload admin.
-- [x] Profils Discord, personnages, groupes JDR et leur administration.
-- [x] Annotations persistantes, événements de quête et flux SSE live existants.
-- [x] Chronologie avec filtres, médias, URL partageable, liens carte/frise et administration.
-- [x] Planning **daté**, agenda mensuel, disponibilités, sessions candidates/confirmées, réponses, saisie multi-date, synthèses MJ et administration.
-- [x] API/persistance JSON, validations partagées, tests unitaires/API/UI et pipeline de livraison.
+L'ancien historique et les anciennes données ne sont pas réintroduits dans Git. La [roadmap locale](https://github.com/Daneisra/Carte-Hesta/blob/main/ROADMAP.md) et le [runbook](https://github.com/Daneisra/Carte-Hesta/blob/main/docs/OPS-RUNBOOK.md) restent les références techniques actuelles.
 
-**Partiel / en cours / maintenance :**
-
-- [ ] Corrections de bugs et régressions, ainsi que petites améliorations UX non structurantes : activité continue, pas un jalon clos.
-- [ ] **Partiel :** finition mobile complète de toutes les surfaces ; plusieurs parcours responsive sont déjà livrés/testés.
-- [ ] **En cours :** modularisation de UiController ; modèles profil/personnages/disponibilités/annotations déjà extraits, dépendances croisées restantes.
-- [ ] **Partiel :** observabilité serveur/client ; logs/mesures existent, métriques/traces/dashboard complets restent à traiter.
-- [ ] **En cours :** nettoyage legacy ; extractions/nettoyages réalisés, alias de compatibilité et dette UI subsistants.
-- [ ] Traiter la divergence possible JSON VPS/Git et la sensibilité des médias lourds/LFS.
-- [ ] Évaluer le déclenchement du déploiement indépendamment du résultat CI, le cookie fixe et l'intérêt éventuel d'une base de données.
-
-La **prochaine grande étape reste l'audit complet de Carte Interactive** avant toute réorganisation de la carte, de la chronologie, du planning et de leurs interactions avec le Codex. Cet état des lieux ne réalise pas cet audit.
+La **prochaine grande étape** est l'intégration progressive Hesta Codex ↔ Carte Hesta ↔ chronologie : commencer par l'inventaire des sources et la qualification canonique, pas par un nouvel audit général de sécurisation.
 
 ## E2 — Hesta Codex : socle livré et périmètres partiels
 
-**Livré à `f6f73d7` ; recette MJ et validation du corpus à poursuivre.** Preuves [C1–C20](docs/ECOSYSTEM-AUDIT-2026-10.md#hesta-codex).
+**Socle livré ; recette MJ et qualification du corpus à poursuivre selon les documents du Codex.** Preuves [C1–C20](docs/ECOSYSTEM-AUDIT-2026-10.md#hesta-codex).
 
 ### Fonctionnalités développées, testées et déployées
 
@@ -166,14 +167,14 @@ Une référence Obsidian est une mention dérivée ; une ligne QUALIFIED signifi
 - [x] Détecter alias/doublons/candidats et liens non résolus/ambigus, sans résolution arbitraire.
 - [x] Produire et approuver un plan avant création groupée de fiches PROPOSED/GM.
 - [x] Transformer les wikilinks résolus en **navigation/références automatiques** ; assistance de qualification humaine en relations éditoriales.
-- [ ] **À vérifier :** état privé annoncé de 161 notes / 31 réservées / 130 fiches, associations, preuves et révisions ; relever les compteurs réels sans les déduire des fixtures.
+- [ ] Poursuivre la qualification du corpus privé dans le Codex, sans déduire sa publication des imports ou des fixtures.
 - [ ] Poursuivre les imports nécessaires et corriger les classifications/diagnostics restant à traiter.
 - [ ] Qualifier les mentions en relations typées sourcées ; ne pas convertir automatiquement une mention en fait canon.
 - [ ] Valider manuellement les fiches sensibles et leurs niveaux de visibilité.
 
-**Staging ≠ Entity créée ≠ référence détectée ≠ relation éditoriale validée ≠ canon public.** Les 130 fiches annoncées ne signifient pas 130 publications ; les 31 notes réservées ne sont pas des Entity à inventer. La bibliothèque/graphe publics contrôlés sont actuellement vides.
+**Staging ≠ Entity créée ≠ référence détectée ≠ relation éditoriale validée ≠ canon public.** Les imports ne valent jamais autorisation de publication.
 
-### Carte Hesta — prévu après l'audit
+### Carte Hesta — migration progressive à définir
 
 - [ ] Importer progressivement `locations.json`.
 - [ ] Extraire PNJ, familles, instances et lore imbriqués en entités reliées.
@@ -225,10 +226,12 @@ L'analyse visuelle des vidéos reste une suite possible pour cartes, handouts et
 
 ## E6 — Connecter Carte Hesta au Codex
 
-**Prévu ; prochaine grande étape : audit complet de Carte Interactive avant toute réorganisation.** L'API Codex existe (C20), mais aucun consommateur dans Carte Hesta n'est démontré (M8).
+**Prochaine grande étape, non réalisée : reprise du plan d’intégration Codex ↔ Carte ↔ chronologie.** L'API Codex existe (C20), mais aucun consommateur dans Carte Hesta n'est démontré (M8).
 
-- [ ] Auditer l'organisation fonctionnelle/technique de la carte, de la chronologie et du planning, ainsi que leurs interactions futures avec le Codex.
-- [ ] Définir responsabilités et priorités d'intégration à partir de cet audit.
+- [ ] Inventorier les sources actuelles des lieux, personnages, événements et de la chronologie : propriétaires, formats, identifiants et permissions.
+- [ ] Distinguer le lore durable à rendre canonique dans le Codex des coordonnées, marqueurs, groupes et données de planning propres à Carte Hesta.
+- [ ] Définir les responsabilités, relations et identifiants stables entre applications ; aucune correspondance implicite par nom ou slug.
+- [ ] Prévoir des copies de travail, une migration progressive sans perte, un fallback compatible et un rollback explicite.
 - [ ] Stabiliser le contrat de lecture requis pour Carte Hesta, notamment permissions, erreurs, pagination et identités ; ne pas confondre API v1 disponible et contrat interapplications validé.
 - [ ] Résolution UUID/slug depuis Carte Hesta.
 - [ ] Affichage Codex sur une fiche lieu pilote.
@@ -298,25 +301,24 @@ Exemples de requêtes conservés :
 
 ## Prochaines priorités
 
-1. Relire puis livrer séparément l'intégration Codex du Hub et cette synchronisation documentaire ; aucune livraison n'est effectuée dans cette tâche.
-2. **Grande étape suivante : audit complet de Carte Interactive**, avant refonte ou réorganisation.
-3. Réaliser la recette Codex privée autorisée : corpus, qualification, permissions, dernières fonctions et sauvegarde/restauration ; poursuivre la validation éditoriale.
-4. Maintenir Carte Hesta et Système PA ; décider des suites PA 1.1.x selon l'usage, sans rouvrir artificiellement le jalon 1.0.0 livré.
-5. Consolider Obsidian et préparer les correspondances Carte/Codex selon les conclusions de l'audit.
-6. Ajouter les sources Discord, puis le pipeline sessions JDR/YouTube.
-7. Connecter progressivement Carte Hesta, reprendre les différenciants P8, puis recherche globale et assistant documentaire.
+1. Relire ces PR de liens/documentation, puis autoriser séparément les fusions et livraisons ; aucun déploiement dans cette mission.
+2. **Reprendre le plan Codex ↔ Carte ↔ chronologie** : audit ciblé des sources actuelles des lieux, personnages, événements et chronologie.
+3. Déterminer les données canoniques futures du Codex, leurs relations, identifiants stables, provenance et règles de visibilité.
+4. Concevoir les contrats de lecture, les correspondances et une migration progressive sans perte ni changement implicite des permissions.
+5. Poursuivre la validation éditoriale Codex et les évolutions PA selon l'usage ; observer le prochain véritable redémarrage normal de Carte Hesta.
+6. Garder les connecteurs Discord, le pipeline sessions/YouTube et les autres objectifs comme chantiers futurs, distincts de la présente harmonisation.
 
 ## Problèmes et dettes techniques identifiés
 
 | Projet | Dette ou limite | Suite |
 | --- | --- | --- |
-| Hub/documentation | Anciennes intentions confondues avec l'état courant ; intégration Codex encore locale. | Gouvernance ci-dessous et validation/livraison séparées. |
-| Carte Hesta | UiController, couplages/legacy, JSON VPS/Git, médias LFS, observabilité et finition mobile ; déploiement non conditionné à la CI. | Évaluer pendant l'audit, puis prioriser sans migration automatique. |
+| Hub/documentation | Invitation Discord générale à confirmer ; harmonisation préparée en PR. | Validation humaine des liens puis livraison séparée. |
+| Carte Hesta | Véritable redémarrage à observer ; contrat Codex et correspondances encore absents. | Prochain chantier ciblé, sans refaire les migrations ou audits de sécurité terminés. |
 | Système PA | Éditeur limité à cinq domaines ; synchronisation GitHub/local absente ; docs de release/navigation périmées. | Roadmap locale 1.1.x et corrections documentaires dans une tâche dédiée. |
 | Hesta Codex | Recherche/pagination publiques, permissions fines, historique hors Entity, retcon, restauration, limites de référence/graph, délais Windows et taille du bundle. | Recettes et évolutions locales documentées ; aucune clôture par analogie. |
 | Exploitation | Sauvegarde/restauration, concurrence réelle, renouvellement Certbot et recette MJ non intégralement vérifiés ici. | Conserver À vérifier avec preuves opérateur datées. |
 
-Les [contradictions détaillées](docs/ECOSYSTEM-AUDIT-2026-10.md#contradictions-et-points-à-vérifier) sont enregistrées sans modifier les trois dépôts consultés.
+Les [contradictions historiques](docs/ECOSYSTEM-AUDIT-2026-10.md#contradictions-et-points-à-vérifier) décrivent le 12 octobre ; les statuts Carte Hesta ci-dessus les remplacent pour son exploitation actuelle.
 
 ## Gouvernance et synchronisation
 
@@ -335,13 +337,11 @@ Règles de gouvernance éditoriale conservées : le Codex ne remplace pas les ap
 
 ## Dernière synchronisation
 
-**12 octobre 2026 — Europe/Paris.** Quatre dossiers lisibles ; toutes les branches locales sont `main`. Lecture des README, roadmaps disponibles, documents techniques, code/tests, commits récents et preuves GitHub Actions. Les trois autres projets restent strictement en lecture seule.
+**22 octobre 2026.** Corrections ciblées des liens, textes et statuts dans les quatre dépôts officiels. Branches distinctes et PR sans fusion ; aucun workflow, secret, contenu privé ou service de production modifié.
 
-| Dépôt | Révision Git consultée | État local au début de la synchronisation |
-| --- | --- | --- |
-| Hesta-Hub | [ef95fe3782b8a6b66177a21dc3dbfe34badf4bb6](https://github.com/Daneisra/Hesta-Hub/commit/ef95fe3782b8a6b66177a21dc3dbfe34badf4bb6) | Intégration Codex et documentation déjà modifiées, non commitées ; cette synchronisation ajoute seulement de la documentation. |
-| Hesta-Codex | [f6f73d729ebca88ea386365b1a2e130aefb066ca](https://github.com/Daneisra/Hesta-Codex/commit/f6f73d729ebca88ea386365b1a2e130aefb066ca) | Propre. |
-| Carte Interactive | [b78e174bcdb15196d763dee66b1189fae3aa2b66](https://github.com/Daneisra/Carte-Interactive/commit/b78e174bcdb15196d763dee66b1189fae3aa2b66) | Propre. |
-| Armures d100 | [25df663066f45f5bb9cc6e045519df042f615afc](https://github.com/Daneisra/Armures-d100-Hesta/commit/25df663066f45f5bb9cc6e045519df042f615afc) | Propre ; tag local v1.0.0 sur ce commit. |
+- Carte Hesta : sécurisation, reconstruction publique, migration, premier Deploy GitHub Actions et installation systemd validés par l'opérateur. Essai réel de redémarrage encore en attente.
+- Hub : [dernière livraison consultée](https://github.com/Daneisra/Hesta-Hub/actions/runs/38260476392), incluant la carte Codex.
+- Codex : [dernière livraison consultée](https://github.com/Daneisra/Hesta-Codex/actions/runs/39651801338) ; cette mission ne refait pas sa recette métier.
+- Système PA : [dernière livraison consultée](https://github.com/Daneisra/Armures-d100-Hesta/actions/runs/38260500757), version stable déjà publiée.
 
-Les runs/contrôles publics et leurs limites sont consignés dans le [relevé daté](docs/ECOSYSTEM-AUDIT-2026-10.md). Les validations du Hub portent sur le travail local préparé ; aucune nouvelle livraison, migration ou modification de données n'est effectuée.
+La [photographie du 12 octobre](docs/ECOSYSTEM-AUDIT-2026-10.md) est conservée pour contexte historique. Aucun statut d'intégration Carte/Codex n'est coché sur la seule base de liens entre applications.

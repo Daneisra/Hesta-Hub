@@ -38,7 +38,7 @@ Le workflow [GitHub Actions](.github/workflows/deploy.yml) se lance automatiquem
 
 Ajoutez un objet au tableau `applications` dans `src/App.tsx`. Chaque objet fournit un identifiant, une catégorie, le nom, une courte description, les fonctions principales, l'URL, le libellé du bouton, un monogramme et une couleur d'accent existante (`azure` ou `violet`). Une note d'accès facultative (`accessNote`) permet de préciser les restrictions de contenu. Le composant `ApplicationCard` et la grille responsive affichent automatiquement la nouvelle entrée, sans mise en page propre à un nombre fixe d'applications.
 
-Les liens vers Carte Hesta, Système PA et Hesta Codex sont des URL publiques directes. Le lien communautaire mène à la section Discord de Carte Hesta ; il peut être remplacé par une invitation Discord publique stable lorsqu'elle est confirmée.
+Les liens vers Carte Hesta, Système PA et Hesta Codex sont des URL publiques directes. Le Hub centralise la communauté, l’accès à Discord et le support général via ses [Issues existantes](https://github.com/Daneisra/Hesta-Hub/issues). L’invitation Discord générale doit être confirmée avant affichage ; aucun lien d’événement n’est réutilisé par supposition. Les bugs propres à Carte Hesta utilisent [ses modèles de signalement](https://github.com/Daneisra/Carte-Hesta/issues/new/choose).
 
 ## Documentation
 
@@ -48,13 +48,13 @@ Les liens vers Carte Hesta, Système PA et Hesta Codex sont des URL publiques di
 
 La roadmap technique de chaque dépôt reste sa référence locale ; celle du Hub synthétise l'état global. Pour chaque évolution majeure, vérifier le code, les tests, la révision Git et la livraison du projet concerné, puis actualiser les statuts, les preuves et la date de synchronisation dans `ROADMAP.md`. Une fonctionnalité développée, testée, déployée et validée en usage réel correspond à quatre niveaux de preuve distincts. La [gouvernance de synchronisation](ROADMAP.md#gouvernance-et-synchronisation) précise la procédure, sans automatisation.
 
-La prochaine grande étape est un audit de Carte Hesta pour organiser la carte, la chronologie, le planning et leurs interactions avec le Codex.
+La sécurisation de Carte Hesta, son dépôt public, sa remise en production, sa CI et son Deploy manuel sont terminés. Son mécanisme systemd est installé ; le véritable redémarrage reste à observer. La prochaine grande étape est la reprise de l’intégration Codex ↔ Carte ↔ chronologie : inventaire des sources actuelles, qualification canonique, identifiants stables et migration progressive, sans intégration déjà réalisée.
 
 ## Écosystème Hesta
 
 | Application | Rôle | URL publique |
 | --- | --- | --- |
-| Hesta Hub — ce projet | Portail central | [hesta.dannytech.fr](https://hesta.dannytech.fr/) |
-| Carte Hesta | Carte interactive, chronologie, planning et communauté | [cartehesta.dannytech.fr](https://cartehesta.dannytech.fr/) |
+| Hesta Hub — ce projet | Portail central, communauté et support général | [hesta.dannytech.fr](https://hesta.dannytech.fr/) |
+| Carte Hesta | Carte interactive, lieux, chronologie, planning et administration | [cartehesta.dannytech.fr](https://cartehesta.dannytech.fr/) |
 | Système PA | Armures, règles et calculs | [pahesta.dannytech.fr](https://pahesta.dannytech.fr/) |
 | Hesta Codex | Encyclopédie, lore, relations éditoriales et provenance | [codexhesta.dannytech.fr](https://codexhesta.dannytech.fr/) |

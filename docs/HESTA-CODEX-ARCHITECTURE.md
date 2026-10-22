@@ -1,12 +1,12 @@
 # Hesta Codex — Architecture cible
 
-Ce document définit une première architecture de référence pour **Hesta Codex**, future base de connaissance structurée de l'univers Hesta.
+Ce document conserve l’architecture cible de **Hesta Codex**. Son socle web/API, PostgreSQL et éditorial existe déjà ; les connexions interapplications décrites ici restent à développer. L’état courant et la prochaine étape sont précisés dans la [roadmap globale](../ROADMAP.md).
 
 Le but n'est pas de reproduire Obsidian dans un navigateur. Le Codex doit reprendre ses forces — Markdown, liens, backlinks, graphe, recherche — tout en fournissant une donnée structurée et stable réutilisable par Carte Hesta, de futurs outils et des traitements IA.
 
 ## 1. Rôle du Codex
 
-Hesta Codex devient la source de vérité pour la connaissance durable :
+Après qualification éditoriale et migration progressive, Hesta Codex doit devenir le référentiel canonique de la connaissance durable :
 
 - lieux et territoires ;
 - personnages ;
@@ -29,7 +29,7 @@ Il ne doit pas absorber les responsabilités spécifiques des autres application
 - planning opérationnel des prochaines parties : Carte Hesta ;
 - annotations temporaires de carte : Carte Hesta ;
 - règles et calculs d'armure : Système PA ;
-- portail public : Hesta Hub.
+- portail public, communauté, Discord et support général : Hesta Hub.
 
 ---
 
