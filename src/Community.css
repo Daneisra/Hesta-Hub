@@ -1,0 +1,266 @@
+.community-section,
+.repositories-section {
+  padding-bottom: 76px;
+  scroll-margin-top: 24px;
+}
+
+.community-channels,
+.repositories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+  gap: 18px;
+}
+
+.channel-card,
+.repository-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid rgba(158, 177, 213, 0.22);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(22, 34, 58, 0.9), rgba(11, 18, 35, 0.94));
+  color: #edf2ff;
+  text-decoration: none;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.channel-card:hover,
+.repository-card:hover {
+  border-color: rgba(216, 182, 106, 0.6);
+  background: linear-gradient(145deg, rgba(30, 43, 69, 0.96), rgba(15, 22, 41, 0.96));
+}
+
+.community-badge {
+  padding: 6px 10px;
+  border: 1px solid rgba(169, 190, 228, 0.22);
+  border-radius: 999px;
+  color: #c6d6f0;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.channel-card h3,
+.repository-card h3 {
+  margin: 18px 0 10px;
+  color: #edf2ff;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.channel-card > p,
+.repository-card > p,
+.discord-panel__copy > p,
+.support-intro,
+.repositories-note {
+  margin: 0;
+  color: #aebdd6;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.channel-card > p,
+.repository-card > p {
+  margin-bottom: 18px;
+}
+
+.channel-card__presence {
+  margin-bottom: 18px;
+  color: #a8ceff;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.community-card-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  color: #f0ddad;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.discord-panel,
+.support-panel {
+  padding: 32px;
+  border: 1px solid rgba(216, 182, 106, 0.25);
+  border-radius: 20px;
+  background: linear-gradient(120deg, rgba(24, 32, 52, 0.92), rgba(18, 22, 42, 0.9));
+}
+
+.discord-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 40px;
+  margin-top: 22px;
+}
+
+.discord-panel__copy,
+.support-panel > div,
+.support-wishlists li {
+  min-width: 0;
+}
+
+.discord-panel__copy h3,
+.support-panel h2 {
+  margin: 12px 0 16px;
+  color: #f1f3fc;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.discord-panel__copy > .section-heading__eyebrow {
+  color: #e2c789;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.discord-panel__copy .community-button {
+  margin-top: 22px;
+}
+
+.discord-panel__copy > .discord-panel__fallback {
+  margin-top: 16px;
+  color: #93a6c5;
+  font-size: 12px;
+}
+
+.discord-widget {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 370px;
+  border: 0;
+  border-radius: 12px;
+  background: #111827;
+  color-scheme: dark;
+}
+
+.community-button,
+.support-wishlists a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 12px 18px;
+  border: 1px solid rgba(216, 182, 106, 0.38);
+  border-radius: 10px;
+  background: rgba(216, 182, 106, 0.04);
+  color: #f2dfaf;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.community-button:hover,
+.support-wishlists a:hover {
+  border-color: rgba(216, 182, 106, 0.75);
+  background: rgba(216, 182, 106, 0.12);
+}
+
+.community-button span,
+.support-wishlists a span {
+  flex: none;
+}
+
+.community-button--primary {
+  border-color: rgba(159, 171, 246, 0.55);
+  background: linear-gradient(120deg, rgba(60, 91, 154, 0.6), rgba(100, 59, 158, 0.6));
+  color: #f0f3ff;
+}
+
+.repositories-note {
+  margin-top: 22px;
+}
+
+.repositories-note a {
+  color: #e8d19a;
+  text-underline-offset: 3px;
+}
+
+.repositories-note a:hover {
+  color: #fff0c8;
+}
+
+.support-section {
+  padding-bottom: 80px;
+  scroll-margin-top: 24px;
+}
+
+.support-intro {
+  max-width: 70ch;
+}
+
+.support-donations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 26px 0 30px;
+}
+
+.support-panel h3 {
+  margin: 0 0 16px;
+  color: #e3eaf8;
+  font-size: 17px;
+}
+
+.support-wishlists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.support-wishlists a {
+  width: 100%;
+  height: 100%;
+  border-color: rgba(165, 187, 225, 0.25);
+  background: rgba(166, 185, 223, 0.035);
+  color: #d0dcf0;
+}
+
+@media (max-width: 780px) {
+  .discord-panel {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .community-section,
+  .repositories-section {
+    padding-bottom: 60px;
+  }
+
+  .channel-card,
+  .repository-card,
+  .discord-panel,
+  .support-panel {
+    padding: 24px;
+  }
+
+  .support-section {
+    padding-bottom: 60px;
+  }
+
+  .support-donations {
+    flex-direction: column;
+  }
+
+  .support-donations .community-button {
+    width: 100%;
+  }
+}

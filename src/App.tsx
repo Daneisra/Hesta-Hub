@@ -1,4 +1,5 @@
 import './App.css'
+import { Community } from './Community'
 
 type Application = {
   id: string
@@ -157,25 +158,17 @@ function App() {
             </div>
           </section>
 
-          <section className="community" id="communaute" aria-labelledby="community-title">
-            <div className="community__symbol" aria-hidden="true">✧</div>
-            <div className="community__copy">
-              <p className="community__eyebrow">La communauté</p>
-              <h2 id="community-title">L’aventure se vit aussi ensemble.</h2>
-              <p>
-                Le Portail Hesta réunit les échanges communautaires et le <a href="https://github.com/Daneisra/Hesta-Hub/issues">support général</a>. Les bugs de chaque application restent suivis dans son propre projet.
-              </p>
-            </div>
-            <a className="community__link" href="https://discord.com/invite/a67SVZtZXk">
-              Rejoindre Discord <span aria-hidden="true">↗</span>
-            </a>
-          </section>
+          <Community />
         </main>
 
         <footer className="site-footer">
           <span>HESTA</span>
           <p>Un monde à explorer. Des histoires à écrire.</p>
-          <a href="#accueil">Retour en haut ↑</a>
+          <nav className="site-footer__links" aria-label="Liens du portail">
+            <a href="#projets">GitHub</a>
+            <a href="#soutenir">Soutenir</a>
+            <a href="#accueil">Retour en haut ↑</a>
+          </nav>
         </footer>
       </div>
     </>
