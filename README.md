@@ -9,6 +9,8 @@
 
 # Hesta-Hub
 
+[![Production](https://img.shields.io/badge/HESTA-en_ligne-c8aa67)](https://hesta.dannytech.fr/) [![Déploiement](https://github.com/Daneisra/Hesta-Hub/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/Daneisra/Hesta-Hub/actions/workflows/deploy.yml) ![React 19](https://img.shields.io/badge/React-19-61dafb) ![Vite 8](https://img.shields.io/badge/Vite-8-646cff) ![TypeScript 6](https://img.shields.io/badge/TypeScript-6-3178c6) ![Site statique](https://img.shields.io/badge/Statique-sans_backend-c8aa67)
+
 Portail central public de l'univers Hesta, disponible sur [hesta.dannytech.fr](https://hesta.dannytech.fr/). Il présente les applications indépendantes de l'écosystème et oriente vers la communauté. Le portail est statique : aucun backend ni compte n'est nécessaire.
 
 Les trois applications sont accessibles depuis le portail, dans le même onglet. Chacune conserve son fonctionnement et ses permissions. Les contenus importés dans Hesta Codex sont principalement au statut « proposé » et réservés à l'administration MJ ; leur publication reste soumise à validation et à leurs permissions.
@@ -43,6 +45,7 @@ Les liens vers Carte Hesta, Système PA et Hesta Codex sont des URL publiques di
 ## Documentation
 
 - [Roadmap globale de l'écosystème](ROADMAP.md)
+- [Audit de la présentation GitHub des quatre projets](docs/GITHUB-PRESENTATION-AUDIT.md)
 - [Audit transversal du 12 octobre 2026 et preuves de statut](docs/ECOSYSTEM-AUDIT-2026-10.md)
 - [Architecture cible de Hesta Codex — référence de conception](docs/HESTA-CODEX-ARCHITECTURE.md)
 
