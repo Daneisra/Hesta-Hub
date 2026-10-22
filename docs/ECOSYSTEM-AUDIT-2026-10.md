@@ -1,6 +1,8 @@
 # Audit fonctionnel transversal — 12 octobre 2026
 
-Ce relevé justifie les statuts de la [roadmap globale](../ROADMAP.md). Il porte sur les quatre dépôts du workspace Hesta-Ecosystem, leurs README, leurs documents techniques, leur code, leurs tests, leurs derniers commits et les exécutions GitHub Actions correspondantes. Les quatre dossiers sont accessibles en lecture.
+**Document historique du 12 octobre 2026.** Il décrit l’état antérieur à la sécurisation et à la reconstruction de Carte Hesta. Les statuts actuels sont dans la [roadmap globale](../ROADMAP.md) ; les anciennes preuves Carte sont conservées en archive privée.
+
+Ce relevé justifiait les statuts de la roadmap à cette date. Il porte sur les quatre dépôts du workspace Hesta-Ecosystem, leurs README, leurs documents techniques, leur code, leurs tests, leurs derniers commits et les exécutions GitHub Actions correspondantes. Les quatre dossiers sont accessibles en lecture.
 
 Les chemins techniques ci-dessous sont relatifs au dépôt de leur section, aux révisions indiquées dans la [dernière synchronisation](../ROADMAP.md#dernière-synchronisation). Les identifiants H, C, M et PA permettent de retrouver la preuve d'un changement de statut sans recopier les détails techniques dans la roadmap.
 
@@ -20,7 +22,7 @@ Les chemins techniques ci-dessous sont relatifs au dépôt de leur section, aux 
 | --- | --- | --- | --- |
 | Hesta Hub | `ef95fe3` | [Déploiement du 26 septembre](https://github.com/Daneisra/Hesta-Hub/actions/runs/36238938722) | Lint, build, rsync et contrôle HTTP réussis pour le portail à deux cartes. L'intégration Codex locale n'est pas incluse dans cette révision. |
 | Hesta Codex | `f6f73d7` | [CI du 12 octobre](https://github.com/Daneisra/Hesta-Codex/actions/runs/38243871644), [déploiement](https://github.com/Daneisra/Hesta-Codex/actions/runs/38244104704) | Lint, typecheck, **438 tests API + 318 tests web**, build et Prisma validate réussis. Le journal de livraison confirme migrations, redémarrage PM2, santé API locale et publique. |
-| Carte Hesta | `b78e174` | [CI du 26 septembre](https://github.com/Daneisra/Carte-Interactive/actions/runs/36236074061), [déploiement](https://github.com/Daneisra/Carte-Interactive/actions/runs/36236074092) | Lint d'encodage, tests unitaires, validation assets, **4 tests API, 52 Chromium et 52 Firefox** réussis ; rsync et rechargement API réussis. Le build est un placeholder, pas une compilation du frontend. |
+| Carte Hesta | `b78e174` | CI du 26 septembre (preuve historique conservée en archive privée), déploiement (preuve historique conservée en archive privée) | Lint d'encodage, tests unitaires, validation assets, **4 tests API, 52 Chromium et 52 Firefox** réussis ; rsync et rechargement API réussis. Le build est un placeholder, pas une compilation du frontend. |
 | Système PA | `25df663` | [Tests et déploiement du 27 septembre](https://github.com/Daneisra/Armures-d100-Hesta/actions/runs/36351948151), [release v1.0.0](https://github.com/Daneisra/Armures-d100-Hesta/releases/tag/v1.0.0) | Lint, **46 tests dans 9 fichiers**, build, rsync et vérification publique réussis. Release publiée le 27 septembre, tag ciblant ce même commit. |
 
 Les tests API Codex emploient majoritairement des stores simulés. Les tests du catalogue et de la suppression emploient aussi PGlite éphémère : SQL, contraintes et transactions sont exercés, sans reproduire le VPS ni une concurrence multiconnexion. Les tests web simulent l'API. Les tests API Carte écrivent normalement dans des fixtures/fichiers puis restaurent les états ; ils ne sont pas relancés ici pour respecter la lecture seule.
@@ -98,7 +100,7 @@ Le moteur de références est recalculé par requête avec des limites de 2 000 
 
 ## Carte Hesta
 
-Références locales : [README](https://github.com/Daneisra/Carte-Interactive/blob/b78e174bcdb15196d763dee66b1189fae3aa2b66/README.md) et [roadmap P3 à P9](https://github.com/Daneisra/Carte-Interactive/blob/b78e174bcdb15196d763dee66b1189fae3aa2b66/ROADMAP.md). Il s'agit d'un état des lieux fonctionnel, pas de l'audit approfondi ni d'une proposition de réorganisation.
+Références locales : README (preuve historique conservée en archive privée) et roadmap P3 à P9 (preuve historique conservée en archive privée). Il s'agit d'un état des lieux fonctionnel, pas de l'audit approfondi ni d'une proposition de réorganisation.
 
 | Preuve | Socle livré | Code et tests/documentation confrontés |
 | --- | --- | --- |

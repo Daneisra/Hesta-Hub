@@ -21,7 +21,7 @@ const applications: readonly Application[] = [
     name: 'Carte Hesta',
     description:
       'Parcourez un monde vivant, suivez ses quêtes et retrouvez les histoires qui relient les joueurs.',
-    features: ['Carte interactive', 'Quêtes & communauté', 'Chronologie & planning'],
+    features: ['Carte interactive', 'Lieux & récits', 'Chronologie & planning'],
     href: 'https://cartehesta.dannytech.fr/',
     action: 'Explorer Carte Hesta',
     monogram: 'CH',
@@ -163,11 +163,11 @@ function App() {
               <p className="community__eyebrow">La communauté</p>
               <h2 id="community-title">L’aventure se vit aussi ensemble.</h2>
               <p>
-                Retrouvez les joueurs, les annonces et l’accès au Discord depuis la communauté Carte Hesta.
+                Le Portail Hesta réunit les échanges communautaires et le <a href="https://github.com/Daneisra/Hesta-Hub/issues">support général</a>. Les bugs de chaque application restent suivis dans son propre projet.
               </p>
             </div>
-            <a className="community__link" href="https://cartehesta.dannytech.fr/#home-community">
-              Voir la communauté <span aria-hidden="true">↗</span>
+            <a className="community__link" href="https://discord.com/invite/a67SVZtZXk">
+              Rejoindre Discord <span aria-hidden="true">↗</span>
             </a>
           </section>
         </main>
