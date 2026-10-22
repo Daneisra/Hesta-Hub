@@ -163,11 +163,11 @@ function App() {
               <p className="community__eyebrow">La communauté</p>
               <h2 id="community-title">L’aventure se vit aussi ensemble.</h2>
               <p>
-                Le Portail Hesta réunit les échanges communautaires et le support général. Les bugs de chaque application restent suivis dans son propre projet.
+                Le Portail Hesta réunit les échanges communautaires et le <a href="https://github.com/Daneisra/Hesta-Hub/issues">support général</a>. Les bugs de chaque application restent suivis dans son propre projet.
               </p>
             </div>
-            <a className="community__link" href="https://github.com/Daneisra/Hesta-Hub/issues">
-              Support général <span aria-hidden="true">↗</span>
+            <a className="community__link" href="https://discord.com/invite/a67SVZtZXk">
+              Rejoindre Discord <span aria-hidden="true">↗</span>
             </a>
           </section>
         </main>

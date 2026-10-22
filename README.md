@@ -38,7 +38,7 @@ Le workflow [GitHub Actions](.github/workflows/deploy.yml) se lance automatiquem
 
 Ajoutez un objet au tableau `applications` dans `src/App.tsx`. Chaque objet fournit un identifiant, une catégorie, le nom, une courte description, les fonctions principales, l'URL, le libellé du bouton, un monogramme et une couleur d'accent existante (`azure` ou `violet`). Une note d'accès facultative (`accessNote`) permet de préciser les restrictions de contenu. Le composant `ApplicationCard` et la grille responsive affichent automatiquement la nouvelle entrée, sans mise en page propre à un nombre fixe d'applications.
 
-Les liens vers Carte Hesta, Système PA et Hesta Codex sont des URL publiques directes. Le Hub centralise la communauté, l’accès à Discord et le support général via ses [Issues existantes](https://github.com/Daneisra/Hesta-Hub/issues). L’invitation Discord générale doit être confirmée avant affichage ; aucun lien d’événement n’est réutilisé par supposition. Les bugs propres à Carte Hesta utilisent [ses modèles de signalement](https://github.com/Daneisra/Carte-Hesta/issues/new/choose).
+Les liens vers Carte Hesta, Système PA et Hesta Codex sont des URL publiques directes. Le Hub centralise la communauté, l’accès au [Discord Hesta](https://discord.com/invite/a67SVZtZXk) et le support général via ses [Issues existantes](https://github.com/Daneisra/Hesta-Hub/issues). L’invitation générale a été confirmée par le responsable du projet. Les bugs propres à Carte Hesta utilisent [ses modèles de signalement](https://github.com/Daneisra/Carte-Hesta/issues/new/choose).
 
 ## Documentation
 

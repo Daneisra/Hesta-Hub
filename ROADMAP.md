@@ -21,7 +21,7 @@ Une case cochée clôt uniquement le périmètre qu'elle nomme. Elle ne certifie
 
 | Application | Rôle et état | Livraison / limite |
 | --- | --- | --- |
-| [Hesta Hub](https://hesta.dannytech.fr/) | Portail central, accès aux trois applications, communauté, Discord et support général. | Carte Codex déjà livrée. Cette harmonisation reste en PR ; invitation Discord générale à confirmer avant affichage. |
+| [Hesta Hub](https://hesta.dannytech.fr/) | Portail central, accès aux trois applications, communauté, Discord et support général. | Carte Codex déjà livrée. Cette harmonisation reste en PR ; invitation Discord générale confirmée et intégrée. |
 | [Carte Hesta](https://cartehesta.dannytech.fr/) | Carte, lieux, chronologie, planning et administration sécurisés ; [dépôt officiel public](https://github.com/Daneisra/Carte-Hesta). | Site en production, CI Linux et Deploy manuel protégés opérationnels. Mécanisme systemd installé ; véritable redémarrage encore à observer. |
 | [Hesta Codex](https://codexhesta.dannytech.fr/) | Connaissances, édition, provenance et relations ; futur référentiel canonique du lore après qualification. | Socle livré, publication explicite selon les permissions ; intégration Carte/chronologie non réalisée. |
 | [Système PA](https://pahesta.dannytech.fr/) | Règles d'armure, calculs et personnalisations locales indépendants. | Version stable 1.0.0 publiée ; évolutions locales conservées. |
@@ -312,7 +312,7 @@ Exemples de requêtes conservés :
 
 | Projet | Dette ou limite | Suite |
 | --- | --- | --- |
-| Hub/documentation | Invitation Discord générale à confirmer ; harmonisation préparée en PR. | Validation humaine des liens puis livraison séparée. |
+| Hub/documentation | Invitation Discord générale confirmée ; harmonisation préparée en PR. | Autorisation de fusion puis vérification du déploiement automatique. |
 | Carte Hesta | Véritable redémarrage à observer ; contrat Codex et correspondances encore absents. | Prochain chantier ciblé, sans refaire les migrations ou audits de sécurité terminés. |
 | Système PA | Éditeur limité à cinq domaines ; synchronisation GitHub/local absente ; docs de release/navigation périmées. | Roadmap locale 1.1.x et corrections documentaires dans une tâche dédiée. |
 | Hesta Codex | Recherche/pagination publiques, permissions fines, historique hors Entity, retcon, restauration, limites de référence/graph, délais Windows et taille du bundle. | Recettes et évolutions locales documentées ; aucune clôture par analogie. |
